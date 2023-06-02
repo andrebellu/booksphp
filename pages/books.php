@@ -318,6 +318,13 @@ session_start();
                 document.getElementById('book-rating').textContent = "Rating: " + details.rating;
                 document.getElementById('book-date').textContent = "Publication Date: " + details.date;
 
+                // replace + in the title, description, and author with spaces
+                document.getElementById('book-title').textContent = document.getElementById('book-title').textContent.replace(/\+/g, ' ');
+                document.getElementById('book-description').textContent = document.getElementById('book-description').textContent.replace(/\+/g, ' ');
+                document.getElementById('book-author').textContent = document.getElementById('book-author').textContent.replace(/\+/g, ' ');
+                document.getElementById('book-genre').textContent = document.getElementById('book-genre').textContent.replace(/\+/g, ' ');
+
+
                 document.getElementById('popup').classList.remove('hidden');
             }
 
